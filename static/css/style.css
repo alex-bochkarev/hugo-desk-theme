@@ -75,14 +75,14 @@ a.nav-link:hover {
 }
 /* normal links */
 
-a:not(.nav-link):not(.sticker) {
+a:not(.nav-link):not(.sticker):not(not-a-text-link) {
     color: var(--main-accent);
     border-top: 1px dashed var(--main-accent);
     border-bottom: 1px dashed var(--main-accent);
     text-decoration: none;
     padding: 2px;
 }
-a:hover:not(.nav-link):not(.sticker) {
+a:hover:not(.nav-link):not(.sticker):not(not-a-text-link) {
     color: var(--main-bg);
     background-color: var(--main-accent);
     border-radius: 5px;
@@ -100,14 +100,18 @@ a[href*="wikipedia.org"]:not(.nav-link):not(.sticker)::before {
     vertical-align: -30%;
 }
 
-a[href*="bochkarev.io"]:not(.nav-link)::before,
+a[href^="mailto:"]:not(.nav-link)::before {
+    content: url('/email.svg');
+    padding: 5px;
+}
+a[href*="bochkarev.io"]:not(not-a-text-link):not(.nav-link)::before,
 a[href^="/"]:not(.nav-link)::before,
-a[href^="#"]:not(.nav-link):not(.footnote-backref):not(.footnote-ref):not(.sticker)::before
+a[href^="#"]:not(not-a-text-link):not(a) > not-a-text-link:not(.nav-link):not(.footnote-backref):not(.footnote-ref):not(.sticker)::before
 {
     content: '§ '
 }
 
-a:not([href*='bochkarev.io']):not([href^='#']):not([href^='/']):not([href*="github.com"]):not([href*="wikipedia.org"]):not(.nav-link):not(.sticker)::before {
+a:not([href*='bochkarev.io']):not([href^='#']):not([href^='/']):not([href*="github.com"]):not([href*="wikipedia.org"]):not(.nav-link):not(.sticker):not([href^="mailto:"])::before {
     content: url('/outside.svg');
     padding: 5px;
 }
@@ -212,6 +216,7 @@ body {
 /* sticky footer */
 html, body {
     height: 100%;
+    scroll-padding-top: 100px;
 }
 .container {
     flex: 1 0 auto;
