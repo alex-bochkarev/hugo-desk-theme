@@ -108,7 +108,8 @@ a[href*="bochkarev.io"]:not(not-a-text-link):not(.nav-link)::before,
 a[href^="/"]:not(.nav-link)::before,
 a[href^="#"]:not(not-a-text-link):not(a) > not-a-text-link:not(.nav-link):not(.footnote-backref):not(.footnote-ref):not(.sticker)::before
 {
-    content: '§ '
+    content: '§';
+    padding-right: 2px;
 }
 
 a:not([href*='bochkarev.io']):not([href^='#']):not([href^='/']):not([href*="github.com"]):not([href*="wikipedia.org"]):not(.nav-link):not(.sticker):not([href^="mailto:"])::before {
@@ -192,6 +193,7 @@ a.nav-icon-link:hover {
     padding-left: 10ch;
     padding-right: 10ch;
     padding-bottom: 2em;
+    text-align: justify;
 }
 
 @media screen and (max-width: 140ch){
