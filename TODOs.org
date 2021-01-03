@@ -1,0 +1,6 @@
+#+TITLE: Current (theme) project TODOs and the related info
+
+* Current project TODOs
+** TODO Add some theme meta-data
+ [2021-01-03 Sun 11:42]
+ (maybe see [[https://retrolog.io/blog/creating-a-hugo-theme-from-scratch/][some blogs]] or official docs?)

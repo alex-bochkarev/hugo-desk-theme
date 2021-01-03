@@ -3,9 +3,10 @@
 
 name = "desk"
 license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+licenselink = "https://github.com/alex-bochkarev/hugo-desk-theme/blob/master/LICENSE"
+
 description = ""
-homepage = "http://example.com/"
+homepage = "https://github.com/alex-bochkarev/hugo-desk-theme"
 tags = []
 features = []
 min_version = "0.41.0"
