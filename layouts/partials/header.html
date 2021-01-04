@@ -15,8 +15,8 @@
                     {{ $text }}
                 </a></li>
                 {{ end }}
-                <li> ~ </li>
-            <li>{{ range .Site.Menus.side }}
+                <li class="menu-item"> ~ </li>
+            <li class="menu-item">{{ range .Site.Menus.side }}
             <a class="nav-link nav-icon-link" href="{{ .URL }}">
                 <svg viewBox="0 0 25 25"><use xlink:href="/icons.svg#{{.Name}}"></use></svg>
             </a>

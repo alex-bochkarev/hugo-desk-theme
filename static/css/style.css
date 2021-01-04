@@ -102,7 +102,7 @@ a[href*="wikipedia.org"]:not(.nav-link):not(.sticker)::before {
 
 a:not(not-a-text-link):not(.nav-link):not([href^="mailto"])::before,
 a[href^="/"]:not(.nav-link)::before,
-a[href^="#"]:not(not-a-text-link):not(a) > not-a-text-link:not(.nav-link):not(.footnote-backref):not(.footnote-ref):not(.sticker)::before
+a[href^="#"]:not( < #table-of-contents):not(not-a-text-link):not(a) > not-a-text-link:not(.nav-link):not(.footnote-backref):not(.footnote-ref):not(.sticker)::before
 {
     content: '§';
     padding-right: 2px;
@@ -228,6 +228,24 @@ ul#nav-menu{
     .menu-toggle-text{
         display: none;
     }
+}
+
+/* lists styling */
+ul:not(#nav-menu) {
+    list-style-type: none; /* Remove list bullets */
+    text-indent: -20px;
+    padding: 1ch;
+    margin: 0;
+}
+
+li:not(.menu-item) {
+    padding-left: 16px;
+}
+
+li:not(.menu-item):not([role="doc-endnote"]):before {
+    content: "‒"; /* Insert content that looks like bullets */
+    padding-right: 8px;
+    color: var(--main-accent); /* Or a color you prefer */
 }
 
 a.nav-icon-link:hover {
