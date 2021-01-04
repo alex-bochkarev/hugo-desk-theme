@@ -4,10 +4,13 @@
         <label for="checkbox" class="menu-toggle">
             <svg viewBox="0 0 25 25"><use xlink:href="/icons.svg#hamburger"></use></svg>
         </label>
+        <label for="checkbox" class="menu-toggle-text">
+            {{ .Site.Title }} &mdash; Site menu
+        </label>
         <nav>
             <ul id="nav-menu">
                 {{ range .Site.Menus.main }}
-                <li><a class="nav-link" href="{{ .URL }}">
+                <li class="menu-item"><a class="nav-link" href="{{ .URL }}">
                     {{ $text := print .Name | safeHTML }}
                     {{ $text }}
                 </a></li>

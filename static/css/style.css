@@ -53,7 +53,7 @@ a.nav-link {
 a.nav-link:hover {
     color: var(--main-bg);
     background-color: var(--main-accent);
-    padding: 5px;
+    /* padding: 5px; */
 }
 
 /* list stickers */
@@ -127,50 +127,39 @@ a:hover::before
 
 
 /* menu style */
+ul#nav-menu {
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0;
+}
+
+.menu-item {
+    margin-left: 1ch;
+}
 
 /* version for a narrow screen */
 nav#nav-menu {
     display: inline-block;
-    /* float: center; */
-    /* left:0; */
     padding: 0;
-    /* width: 100%; */
     margin: 0 auto;
     text-align: center;
-}
-
-@media (max-width: 768px) {
-    nav#nav-menu {
-        position: absolute;
-        top: 0;
-        /* top: -1em; */
-    }
-    ul#nav-menu {
-        margin: 0;
-    }
 }
 
 /* version for a wider screen */
 @media (min-width: 768px) {
     nav#nav-menu {
-        /* position: relative; */
-        /* top: 0; /\*-1em;*\/ */
         background-color: transparent;
     }
+
     ul#nav-menu {
-        /* max-height: 70px; */
         padding-top: 0;
-        /* padding-bottom: 1em; */
-        /* padding-left: 50px; */
-        /* padding: 1em 0; */
         display: inline;
         text-align: center;
     }
 
     ul#nav-menu li{
-        margin-left: 15px;
+        /* margin-left: 15px; */
         display: inline-block;
-        /* float: left; */
     }
 }
 
@@ -178,12 +167,6 @@ nav#nav-menu {
 ul#nav-menu{
     list-style-type: none;
 }
-
-/* ul#nav-menu { */
-/*     /\* padding-right: 15px; *\/ */
-/*     /\* padding: 0 15px; *\/ */
-/*     background-color: var(--nothing); */
-/* } */
 
 #checkbox {
     display: none;
@@ -246,8 +229,15 @@ ul#nav-menu{
     /* border-radius: 2px; */
 }
 
+.menu-toggle-text {
+    color: var(--main-accent);
+    margin-left: 1ch;
+}
 @media (min-width: 768px){
     .menu-toggle{
+        display: none;
+    }
+    .menu-toggle-text{
         display: none;
     }
 }
