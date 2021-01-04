@@ -6,7 +6,7 @@
             {{- partial "header.html" . -}}
             {{ if gt (len .TableOfContents) 80}}
                 <div id="table-of-contents">
-                    <h2> Index, <a href="#">top</a> </h2> 
+                    <h2> Index, <a href="#" class="nav-link">top</a> </h2> 
                     <div id="text-table-of-contents" class="not-a-text-link">
                         {{ .TableOfContents }}
                     </div>

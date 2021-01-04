@@ -130,8 +130,8 @@ a:hover::before
 
 /* version for a narrow screen */
 nav#nav-menu {
-    position: absolute;
     display: inline;
+    float: left;
     left:0;
     padding: 0;
     width: 100%;
@@ -140,29 +140,36 @@ nav#nav-menu {
 }
 
 @media (max-width: 768px) {
-    nav {
-        top: 2em;
+    nav#nav-menu {
+        position: absolute;
+        top: 0;
+        /* top: -1em; */
+    }
+    ul#nav-menu {
+        margin: 0;
     }
 }
+
 /* version for a wider screen */
 @media (min-width: 768px) {
     nav {
         position: relative;
-        /* width: 70%; */
-        top:-1em;
+        top: 0; /*-1em;*/
         background-color: transparent;
     }
     ul#nav-menu {
         /* max-height: 70px; */
         /* padding-top: 5px; */
-        padding-bottom: 2em;
+        padding-bottom: 1em;
         /* padding-left: 50px; */
         /* padding: 1em 0; */
-        display: inline-flex;
+        display: inline;
+        text-align: center;
     }
 
     ul#nav-menu li{
-        margin-left: 20px;
+        margin-left: 15px;
+        float: left;
     }
 }
 
@@ -171,11 +178,11 @@ ul#nav-menu{
     list-style-type: none;
 }
 
-ul#nav-menu {
-    /* padding-right: 15px; */
-    /* padding: 0 15px; */
-    background-color: var(--nothing);
-}
+/* ul#nav-menu { */
+/*     /\* padding-right: 15px; *\/ */
+/*     /\* padding: 0 15px; *\/ */
+/*     background-color: var(--nothing); */
+/* } */
 
 #checkbox {
     display: none;
