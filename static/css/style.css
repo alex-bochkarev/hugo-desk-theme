@@ -152,15 +152,17 @@ nav#nav-menu {
         top:-1em;
         background-color: transparent;
     }
-    nav ul#nav-menu {
+    ul#nav-menu {
         /* max-height: 70px; */
         /* padding-top: 5px; */
         padding-bottom: 2em;
-        /* padding-left: 5px; */
+        /* padding-left: 50px; */
         /* padding: 1em 0; */
-    }
-    ul#nav-menu, li#nav-menu {
         display: inline-flex;
+    }
+
+    ul#nav-menu li{
+        margin-left: 20px;
     }
 }
 
