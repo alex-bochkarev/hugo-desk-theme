@@ -152,7 +152,7 @@ nav#nav-menu {
 
 /* version for a wider screen */
 @media (min-width: 768px) {
-    nav {
+    nav#nav-menu {
         position: relative;
         top: 0; /*-1em;*/
         background-color: transparent;
@@ -160,11 +160,11 @@ nav#nav-menu {
     ul#nav-menu {
         /* max-height: 70px; */
         /* padding-top: 5px; */
-        padding-bottom: 1em;
+        /* padding-bottom: 1em; */
         /* padding-left: 50px; */
         /* padding: 1em 0; */
         display: inline;
-        text-align: center;
+        /* text-align: center; */
     }
 
     ul#nav-menu li{
