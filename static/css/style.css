@@ -100,11 +100,7 @@ a[href*="wikipedia.org"]:not(.nav-link):not(.sticker)::before {
     vertical-align: -30%;
 }
 
-a[href^="mailto:"]:not(.nav-link)::before {
-    content: url('/email.svg');
-    padding: 5px;
-}
-a[href*="bochkarev.io"]:not(not-a-text-link):not(.nav-link)::before,
+a:not(not-a-text-link):not(.nav-link):not([href^="mailto"])::before,
 a[href^="/"]:not(.nav-link)::before,
 a[href^="#"]:not(not-a-text-link):not(a) > not-a-text-link:not(.nav-link):not(.footnote-backref):not(.footnote-ref):not(.sticker)::before
 {
@@ -112,7 +108,12 @@ a[href^="#"]:not(not-a-text-link):not(a) > not-a-text-link:not(.nav-link):not(.f
     padding-right: 2px;
 }
 
-a:not([href*='bochkarev.io']):not([href^='#']):not([href^='/']):not([href*="github.com"]):not([href*="wikipedia.org"]):not(.nav-link):not(.sticker):not([href^="mailto:"])::before {
+a[href^="mailto:"]:not(.nav-link)::before {
+    content: url('/email.svg');
+    padding: 5px;
+}
+
+a:not([href^='#']):not([href^='/']):not([href*="github.com"]):not([href*="wikipedia.org"]):not(.nav-link):not(.sticker):not([href^="mailto:"])::before {
     content: url('/outside.svg');
     padding: 5px;
 }
@@ -259,7 +260,7 @@ a.nav-icon-link:hover {
     text-align: justify;
 }
 
-@media screen and (max-width: 140ch){
+@media screen and (max-width: 120ch){
     .main-text {
         width: 90%;
         padding-left: 0;
@@ -322,11 +323,12 @@ div.highlight > pre {
     overflow-x: auto;
 }
 
-div.highlight:hover {
-    width: 60vw;
-    margin-right: calc(-50vw + 50%);
+@media screen and (min-width: 120ch){
+    div.highlight:hover {
+        width: 80vw;
+        margin-right: calc(-50vw + 50%);
+    }
 }
-
 /* table styling */
 table {
     border-collapse: collapse;
