@@ -130,11 +130,11 @@ a:hover::before
 
 /* version for a narrow screen */
 nav#nav-menu {
-    display: inline;
-    float: left;
-    left:0;
+    display: inline-block;
+    /* float: center; */
+    /* left:0; */
     padding: 0;
-    width: 100%;
+    /* width: 100%; */
     margin: 0 auto;
     text-align: center;
 }
@@ -153,23 +153,24 @@ nav#nav-menu {
 /* version for a wider screen */
 @media (min-width: 768px) {
     nav#nav-menu {
-        position: relative;
-        top: 0; /*-1em;*/
+        /* position: relative; */
+        /* top: 0; /\*-1em;*\/ */
         background-color: transparent;
     }
     ul#nav-menu {
         /* max-height: 70px; */
-        /* padding-top: 5px; */
+        padding-top: 0;
         /* padding-bottom: 1em; */
         /* padding-left: 50px; */
         /* padding: 1em 0; */
         display: inline;
-        /* text-align: center; */
+        text-align: center;
     }
 
     ul#nav-menu li{
         margin-left: 15px;
-        float: left;
+        display: inline-block;
+        /* float: left; */
     }
 }
 
@@ -189,7 +190,7 @@ ul#nav-menu{
 }
 
 #checkbox:not(checked) ~ nav ul{
-    max-height: 0px;
+    max-height: 0;
     overflow: hidden;
     transition: all 0.1s;
 }
@@ -219,7 +220,7 @@ ul#nav-menu{
 .nav-icon-link {
     display: inline-block;
     width: 1em;
-    /* height: 1em; */
+    height: 1em;
     font-size: inherit;
     color: inherit;
     vertical-align: -0.125em;
