@@ -246,10 +246,11 @@ a.nav-icon-link:hover {
 .metadata {
     font-size: 70%;
 }
+
 /* general parameters */
 .main-text {
     margin: auto;
-    width: 50%;
+    width: 60%;
     max-width: 60ch;
     background: var(--main-bg);
     border: 1px solid var(--main-bg-accent);
@@ -260,7 +261,7 @@ a.nav-icon-link:hover {
     text-align: justify;
 }
 
-@media screen and (max-width: 120ch){
+@media screen and (max-width: 80ch){
     .main-text {
         width: 90%;
         padding-left: 0;
@@ -323,7 +324,7 @@ div.highlight > pre {
     overflow-x: auto;
 }
 
-@media screen and (min-width: 120ch){
+@media screen and (min-width: 80ch){
     div.highlight:hover {
         width: 80vw;
         margin-right: calc(-50vw + 50%);
