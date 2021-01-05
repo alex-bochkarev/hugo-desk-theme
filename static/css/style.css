@@ -75,7 +75,7 @@ a.nav-link:hover {
 }
 /* normal links */
 
-a:not(.nav-link):not(.sticker):not(not-a-text-link) {
+a:not(.nav-link):not(.sticker):not(.not-a-text-link) {
     color: var(--main-accent);
     border-top: 1px dashed var(--main-accent);
     border-bottom: 1px dashed var(--main-accent);
@@ -244,6 +244,12 @@ li:not(.menu-item) {
 
 li:not(.menu-item):not([role="doc-endnote"]):before {
     content: "‒"; /* Insert content that looks like bullets */
+    padding-right: 8px;
+    color: var(--main-accent); /* Or a color you prefer */
+}
+
+ul li li:not(.menu-item):not([role="doc-endnote"]):before {
+    content: "‣"; /* Insert content that looks like bullets */
     padding-right: 8px;
     color: var(--main-accent); /* Or a color you prefer */
 }

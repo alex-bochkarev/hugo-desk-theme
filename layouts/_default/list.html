@@ -2,11 +2,11 @@
 {{ $dateTime := .PublishDate.Format "2006-01-02" }}
 {{ $dateFormat := .Site.Params.dateFormat | default "2006-01-02" }}
     <div class="main-text">
-        <h1>{{ .Title }}</h1>
+        <h1>{{ if not .Params.nocat }}Category: {{ end }}{{ .Title }}</h1>
         {{ .Content }}
         {{ range .Pages.ByPublishDate.Reverse }}
             <div class="note-block">
-                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3> <!-- class="title"  -->
+                <b><a href="{{ .RelPermalink }}">{{ .Title }}</a></b><br> <!-- class="title"  -->
                 [ 𝚺 ] {{ .Summary }}
                 <div class="metadata">
                     {{ with .Params.links }}
@@ -20,6 +20,7 @@
                         </a> &nbsp;
                         {{ end }}<br/>
                     {{ end }}
+                    <br style="display: block; margin: 3px;">
                     <div class="nav-icon-link">
                         <svg viewBox="0 0 25 25"><use xlink:href="/icons.svg#i-date"></use></svg>
                     </div>
@@ -32,7 +33,7 @@
                         {{ end }}
                     {{ end }}
                 </div>
-            </div>
+            </div><br>
         {{ end }}
     </div>
 {{ end }}
