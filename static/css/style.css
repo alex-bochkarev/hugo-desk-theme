@@ -16,6 +16,9 @@
     text-align: center;
 }
 
+h1 {
+    margin-bottom: 0;
+}
 h1, h2, h3, h4, h5 {
     text-align: left;
 }
@@ -28,6 +31,9 @@ h3 {
     color: var(--main-accent);
 }
 
+p {
+    margin-bottom: 0;
+}
 /* Styling horizontal lines */
 hr.topline {
     border: 5px solid var(--main-accent);

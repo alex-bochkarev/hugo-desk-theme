@@ -4,6 +4,7 @@
     <div class="main-text">
         <h1>{{ if not .Params.nocat }}Category: {{ end }}{{ .Title }}</h1>
         {{ .Content }}
+        <br/>
         {{ range .Pages.ByPublishDate.Reverse }}
             <div class="note-block">
                 <b><a href="{{ .RelPermalink }}">{{ .Title }}</a></b><br> <!-- class="title"  -->

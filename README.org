@@ -6,3 +6,56 @@ the aim to have a simple, (hopefully) JS-free, but nice theme.
 In case you have noticed a typo, or have any other suggestion or comment ---
 please open an issue here in the repo, or [[https://www.bochkarev.io/contact][contact]] me in any other
 convenient way.
+
+* Notes on setup
+** =config.toml=
+   Several things are defined here:
+   #+begin_src toml
+    title = "<default title>" # for tabs and collapsed menu on narrow screens. E.g., initials
+    
+[Author]
+    name = "<author-name>"
+    email = "<default-email>"
+
+# General parameters
+[params]
+    twitter = "<twitter-handle>"
+    github = "<github-uname>"
+    keybase = "<keybase-uname>"
+    tg = "<telegram-id>"
+
+# Menu
+[menu]
+    # Main topline menu
+    [[menu.main]]
+      name = "Section1"
+      url = "/section1/"
+      weight = 1
+    [[menu.main]]
+      name = "Section2"
+      url = "/section2/"
+      weight = 2
+    # ...
+    
+    # Icons top-right-corner menu
+    [[menu.side]]
+      name="i-envelope"
+      url="mailto:your@email.tld"
+      weight=1
+    [[menu.side]]
+      name="i-key"
+      url="/your-gpg-key"
+      weight=1
+    # ...
+    
+# needed to provide inline HTML in your content
+[markup.goldmark.renderer]
+    unsafe= true
+   #+end_src
+   
+   Note that available icons for the top menu are defined in =static/icons.svg=
+   (in the theme directory) -- this is a plain-text file (with =SVG= instructions).
+   
+** Site footer
+   Note that it adds links to files generated from =privacy.md= and
+   =disclaimer.md= if they are found in your =content= folder.
