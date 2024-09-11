@@ -1,0 +1,7 @@
+<a class="sticker" href={{ .Get "href" }} >
+    {{ if .Get "icon" }}
+        <span class="nav-icon-link">
+            <svg class="nav-link" viewBox="0 0 25 25">
+              <use xlink:href="/icons.svg#{{ .Get "icon" }}"></use></svg></span>
+    {{ else }} &nbsp;
+    {{ end }} {{ .Get "text" }} </a> &nbsp;
