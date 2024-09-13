@@ -1,7 +1,5 @@
-<a class="sticker" href={{ .Get "href" }} >
+<a class="sticker paperlink-sticker" href={{ .Get "href" }} >
     {{ if .Get "icon" }}
-        <span class="nav-icon-link">
-            <svg class="nav-link" viewBox="0 0 25 25">
-              <use xlink:href="/icons.svg#{{ .Get "icon" }}"></use></svg></span>
-    {{ else }} &nbsp;
-    {{ end }} {{ .Get "text" }} </a> &nbsp;
+    <span class="nav-link">
+            <svg class="nav-icon-link" style="vertical-align: middle; padding-left: 0px" viewBox="0 0 25 25"><use xlink:href="/icons.svg#{{ .Get "icon" }}"></use></svg></span>
+    {{ end }} {{ .Get "text" }} </a>
